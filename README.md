@@ -62,4 +62,4 @@ Allow users to delete images. Since there are no user accounts, you would have t
 
 ## Preview
 
-<video src="/Users/tigermausi/Desktop/imageboard/imageboard_teaser.mov"></video>
+![](<video src="/Users/tigermausi/Desktop/imageboard/imageboard_teaser.mov"></video>)
