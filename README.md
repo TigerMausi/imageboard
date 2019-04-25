@@ -1,18 +1,30 @@
 # Imageboard Project
 
-A fancy imageboard for collecting all your travelling photos.
+
+
+_A fancy imageboard for collecting all your travelling photos._
 
 This project was made in 5 days during the 12 weeks intensive coding bootcamp at SPICED Academy.
+
+
 
 ## Overview
 
 An Instagram-style, single-page application website, where anybody can upload an image of their choosing, add a title along with a textual description of that image and where other user users could view that image and add some comments to it.
 
+
+
 ## Techstack
+
+
 
 **JavaScript | Handlebars | Vue.js | AWS S3 | Node.js | Express.js | PostgreSQL**
 
+
+
 ## Features
+
+
 
 On the main page there will be a screen with the most recent uploaded images arranged responsively.
 
@@ -59,5 +71,7 @@ Add to the image upload form a text field in which users can specify a list of t
 On the upload form, allow users to enter the url of an image on the web rather than uploading one from their local disk. When you detect on your server that a user has submitted a url, you should make an http request to liberate the image from its host.
 
 Allow users to delete images. Since there are no user accounts, you would have to make it so any user can delete any image no matter who uploaded it. Presumably only high quality images that nobody wants to delete would survive this free for all! -->
+
+
 
 ## Preview
