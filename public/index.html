@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <title>IMAGEBOARD</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <h1 ="logoTitle">imageBoard</h1>
+    <h3>A <span> fancy </span> board for collecting your amazing travelling photos<h3>
+
+<!-- LINKING TO VIEW.JS -->
+    <div id="main">
+        <!-- /pass id to component
+        _> parent need to set image back to 0
+        emit an event like close or end and parent needs to set current image to 0 or default-->
+        <image-modal v-if="currentImage" :id="currentImage" @close="closeModal">
+        </image-modal>
+
+        <form>
+            <input v-model="form.title" type="text" name="title" placeholder="title">
+            <input v-model="form.description" type="text" name="description" placeholder="description">
+            <input v-model="form.username" type="text" name="username" placeholder="username">
+            <input type="file" accept ="image/*" name="file" @change ="handleFileChange" id="filepath">
+            <button @click="uploadFile">
+                     UPLOAD
+            </button>
+        </form>
+
+        <!-- WHERE IMAGES OUGHT TO BE DISPLAYED IN THE MAIN -->
+        <div v-if="images.length" class="images-container">
+            <div v-for="image in images" class="img_beh" @click="setCurrentimage(image.id)">
+
+                    <div class="image-container">
+                        <a :href=" '#' + image.id ">
+                            <img :src=image.url alt="url images">
+                            <p>{{ image.title }}</p>
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+
+        <!-- MORE IMAGES TO BE DISPLAYED WHEN CLICKING ON BUTTON-->
+        <div class="buttonContainer">
+            <button id= "displayButton" @click="displayMoreEventHandler" v-if="moreImgs">
+                SHOW MORE
+            </button>
+        </div>
+
+        <!-- BUTTON FOR DELETING -->
+        <!-- <div class="buttonContainer">
+            <button id= "deleteImg" @clickedDelete="deleteImage">
+                DELETE
+            </button>
+        </div> -->
+
+    </div>
+
+    </div>
+
+<!-- NEEDS TO BE OUTSIDE THE MAIN
+// -> THE TEMPLATE should contain the data in the modal
+//like the IMAGES, the description, comments -->
+<!--
+         the stuff you pass to component is PROPS
+    <coconut v-bind:blabla="coffee" count> </coconut>
+<div> -->
+    <script id="theTemplate" type="text/x-template">
+        <div class="modalOverlay bottom">
+            <div id="containerModal">
+
+            <div class="imageData-container">
+                <div class="modal-container">
+                    <!--
+                    <a :href= ""> '#' + item.id"-->
+                    <div class="clickableArea" @click="closeComponent">
+                        <img :src= imageData.url class="imgsModal " alt="current image url">
+                        <p id="title">{{ imageData.title }}</p>
+                        <div id="fontInModal">
+                            <p>{{ imageData.description }}</p>
+                            <p> created by {{ imageData.username }} at {{ imageData.created_at}}</p>
+                        </div>
+                    <!--</a> -->
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ADDING COMMENTS SECTION -->
+                <form class="formInModal">
+                    <p>Comment :
+                        <input v-model="form.comment" type="text" name="comment" placeholder="enter your comment">
+                    </p>
+                    <p>Username :
+                        <input v-model="form.username" type="text" name="comment" placeholder="enter your username">
+                    </p>
+                    <button class="submitComment" @click="insertComment">
+                        SUBMIT
+                    </button>
+                </form>
+
+
+                <div v-for = "comment in comments" id="commentsInModal">
+                    <div class="chat-bubble designLeft">
+                        <div class = "talktext">
+                            <p id="comment-in-modal">{{ comment.comment }} posted by {{ comment.username }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="/js/vue.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
