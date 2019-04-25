@@ -1,45 +1,33 @@
 # Imageboard Project
 
-
-
 _A fancy imageboard for collecting all your travelling photos._
 
 This project was made in 5 days during the 12 weeks intensive coding bootcamp at SPICED Academy.
-
-
 
 ## Overview
 
 An Instagram-style, single-page application website, where anybody can upload an image of their choosing, add a title along with a textual description of that image and where other user users could view that image and add some comments to it.
 
-
-
 ## Techstack
-
-
 
 **JavaScript | Handlebars | Vue.js | AWS S3 | Node.js | Express.js | PostgreSQL**
 
-
-
 ## Features
 
-
-
-On the main page there will be a screen with the most recent uploaded images arranged responsively.
+-   On the main page a screen with the most recent uploaded images arranged responsively is being displayed.
 
 <!--If the image upload is successful, the server should respond with a payload containing the url of the image. When the client receives this response, it should update the list of images it already has to include the image that was just uploaded. This should cause automatic re-rendering of the list of images with the newest image now appearing.-->
 
-Pagination (infinite scroll) - when clicking on the more button, more images are being loaded until the last image has been displayed and the more button would disappear. (could also be set to greyed out)
+-   Pagination (infinite scroll) - when clicking on the more button, more images are being loaded until the last image has been displayed and the more button would disappear. (could also be set to greyed out)
 
-The user can upload his/her own images using the upload function. Every time an image is being loaded, it would be displayed as the first image from the left.
+-   The user can upload his/her own images using the upload function. Every time an image is being loaded, it would be displayed as the first image from the left.
 
-When users click on one of the images displayed as a card on the main page, a modal will pop up containing the image in a scaled-down size. <!-- The modal should be implemented as a Vue component. When the user clicks on one of the images, our main Vue instance should set a property on itself that makes the modal appear. When the modal component mounts, at least one ajax request will have to be made. It will have to make a request to get any data for the image it does not already have as well as all of the comments for the image. To be able to get this data, the component will need to know at least the id of the image. The id of the image will have to be passed to the component as a prop.
--->
+-   When users click on one of the images displayed as a card on the main page, a modal will pop up containing the image in a scaled-down size. <!-- The modal should be implemented as a Vue component. When the user clicks on one of the images, our main Vue instance should set a property on itself that makes the modal appear. When the modal component mounts, at least one ajax request will have to be made. It will have to make a request to get any data for the image it does not already have as well as all of the comments for the image. To be able to get this data, the component will need to know at least the id of the image. The id of the image will have to be passed to the component as a prop.
+    -->
 
-In order to close the modal, the user will be able to click on an x button or outside the modal. <!--  It will have to emit an event that our Vue instance listens for so that it can know when to hide the modal. -->
+-   In order to close the modal, the user will be able to click on an x button or outside the modal. <!--  It will have to emit an event that our Vue instance listens for so that it can know when to hide the modal. -->
 
-In addition to that, users will be able to see the author's name, the title and a brief description of the image. They will be able to submit comments, which will be displayed in a reverse chronological order.
+-   In addition to that, users will be able to see the author's name, the title and a brief description of the image. They will be able to submit comments, which will be displayed in a reverse chronological order.
 
 <!--
 A problem our image board has is that it is not possible for our users to share links that go directly to an individual image. There is only one url for the entire site and every time you go to it you will see all of the most recently uploaded images. There is no way to go directly to a view showing a single larger-sized image with its comments in a modal.
@@ -71,7 +59,5 @@ Add to the image upload form a text field in which users can specify a list of t
 On the upload form, allow users to enter the url of an image on the web rather than uploading one from their local disk. When you detect on your server that a user has submitted a url, you should make an http request to liberate the image from its host.
 
 Allow users to delete images. Since there are no user accounts, you would have to make it so any user can delete any image no matter who uploaded it. Presumably only high quality images that nobody wants to delete would survive this free for all! -->
-
-
 
 ## Preview
