@@ -1,6 +1,6 @@
 # Imageboard Project
 
-_A fancy imageboard for collecting all your travelling photos._
+**_A fancy imageboard for collecting all your travelling photos._**
 
 This project was made in 5 days during the 12 weeks intensive coding bootcamp at SPICED Academy.
 
@@ -61,3 +61,5 @@ On the upload form, allow users to enter the url of an image on the web rather t
 Allow users to delete images. Since there are no user accounts, you would have to make it so any user can delete any image no matter who uploaded it. Presumably only high quality images that nobody wants to delete would survive this free for all! -->
 
 ## Preview
+
+<video src="/Users/tigermausi/Desktop/imageboard/imageboard_teaser.mov"></video>
