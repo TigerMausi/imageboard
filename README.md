@@ -62,4 +62,4 @@ Allow users to delete images. Since there are no user accounts, you would have t
 
 ## Preview
 
-<video src="imageboard_teaser.mp4" width="320" height="200" controls preload></video>
+<img src="imageboard_prew.gif" alt="imageboard preview">
