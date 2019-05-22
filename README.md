@@ -62,8 +62,4 @@ Allow users to delete images. Since there are no user accounts, you would have t
 
 ## Preview
 
-<<<<<<< HEAD
 <video src="imageboard_teaser.mp4" width="320" height="200" controls preload></video>
-=======
-![](imageboard/imageboard_teaser.mov)
->>>>>>> 6580d4d5411b5ee7b9f7c1ce5f12e61dabd5a6a0
